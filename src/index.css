@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 16% 6%;
+    --foreground: 220 10% 92%;
+
+    --card: 220 16% 9%;
+    --card-foreground: 220 10% 92%;
+
+    --popover: 220 16% 9%;
+    --popover-foreground: 220 10% 92%;
+
+    --primary: 174 60% 51%;
+    --primary-foreground: 220 16% 6%;
+
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 220 10% 75%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 174 60% 51%;
+    --accent-foreground: 220 16% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 16%;
+    --input: 220 14% 16%;
+    --ring: 174 60% 51%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --code-bg: 220 16% 12%;
+    --terminal-green: 142 70% 45%;
+    --terminal-cyan: 174 60% 51%;
+    --status-production: 142 70% 45%;
+    --status-active: 45 93% 47%;
+    --status-personal: 220 70% 55%;
+
+    /* Typography */
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 220 16% 6%;
+    --foreground: 220 10% 92%;
+    --card: 220 16% 9%;
+    --card-foreground: 220 10% 92%;
+    --popover: 220 16% 9%;
+    --popover-foreground: 220 10% 92%;
+    --primary: 174 60% 51%;
+    --primary-foreground: 220 16% 6%;
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 220 10% 75%;
+    --muted: 220 14% 14%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 174 60% 51%;
+    --accent-foreground: 220 16% 6%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 14% 16%;
+    --input: 220 14% 16%;
+    --ring: 174 60% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-mono);
+    @apply font-semibold tracking-tight;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-5xl mx-auto px-6 py-20 md:py-28;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground text-sm md:text-base mb-10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-[hsl(190,60%,60%)] bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .terminal-prompt::before {
+    content: '> ';
+    @apply text-primary;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full;
+  }
+
+  .status-production {
+    @apply bg-[hsl(var(--status-production)/0.15)] text-[hsl(var(--status-production))];
+  }
+
+  .status-active {
+    @apply bg-[hsl(var(--status-active)/0.15)] text-[hsl(var(--status-active))];
+  }
+
+  .status-personal {
+    @apply bg-[hsl(var(--status-personal)/0.15)] text-[hsl(var(--status-personal))];
+  }
+
+  .tech-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono bg-secondary text-secondary-foreground rounded-md border border-border;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
