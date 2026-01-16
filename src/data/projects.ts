@@ -1,6 +1,6 @@
 export { projects } from './projects/index';
 export {
-  aiSiteBuilderProject, 
+  //aiSiteBuilderProject, 
   //careerAiProject, 
 estateManagementProject, 
 mallMarkProject,
