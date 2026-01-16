@@ -5,7 +5,8 @@ export const estateManagementProject: Project = {
   name: 'Estate Management System',
   platform: 'Web & Mobile',
   shortDescription: 'Multi-role Property Management Platform',
-  problemStatement: 'Streamlining estate operations for managers, tenants, and security personnel.',
+  problemStatement:
+    'Streamlining estate operations for managers while supporting tenant and security workflows.',
   status: 'Active Development',
   hasDemo: true,
   hasGithub: false,
@@ -20,7 +21,8 @@ export const estateManagementProject: Project = {
     'PostgreSQL',
   ],
   role: 'Primary Frontend Developer',
-  overview: 'A comprehensive estate management system designed for residential complexes. The system features a web application for estate managers, with planned mobile apps for tenants and security personnel. Currently demonstrating the estate manager dashboard.',
+  overview:
+    'A multi-system estate management platform with a manager-facing web application and companion mobile apps for tenants and security personnel. The manager web app is the primary product surface, and it is the only part available for demo.',
   features: [
     'Role-based access control (Manager, Tenant, Security)',
     'Tenant registration and unit assignment',
@@ -28,8 +30,7 @@ export const estateManagementProject: Project = {
     'Billing and payment tracking',
     'Visitor management and access logs',
     'Announcement and communication hub',
-    'Financial reporting dashboard',
-    'Document management for leases and contracts',
+    'Operational dashboard with payment snapshots',
   ],
   technicalDecisions: [
     {
@@ -51,7 +52,8 @@ export const estateManagementProject: Project = {
   ],
   demoContent: {
     videoUrl: '',
-    videoDescription: 'Demonstration of the estate manager dashboard showcasing tenant management, billing, and maintenance workflows.',
+    videoDescription:
+      'Demonstration of the manager web app showcasing tenant management, billing, and maintenance workflows.',
     screenshots: [
       { caption: 'Dashboard Overview', description: 'At-a-glance view of estate health, occupancy rates, and pending tasks.' },
       { caption: 'Tenant Management', description: 'Register tenants, assign units, and manage lease agreements.' },
@@ -61,7 +63,7 @@ export const estateManagementProject: Project = {
     highlights: [
       { title: 'Role-Based Access', description: 'Different views and capabilities for managers, tenants, and security.' },
       { title: 'Financial Insights', description: 'Real-time dashboards for revenue tracking and expense management.' },
-      { title: 'Communication Hub', description: 'Announcements and direct messaging between stakeholders.' },
+      { title: 'Communication Hub', description: 'Announcements for tenants and resident updates.' },
     ],
   },
 };

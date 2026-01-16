@@ -9,7 +9,8 @@ export const quickposProject: Project = {
     'Small retail teams need a fast, tablet-friendly checkout flow with inventory, payments, and reporting in one place.',
   status: 'Personal Project',
   hasDemo: false,
-  hasGithub: false,
+  hasGithub: true,
+  githubUrl: 'https://github.com/JustMebi/QuickPOS.git',
   techStack: [
     'React',
     'TypeScript',
