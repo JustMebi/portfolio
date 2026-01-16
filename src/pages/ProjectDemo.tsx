@@ -3,13 +3,13 @@ import {
   ArrowLeft,
   Play,
   Image as ImageIcon,
-  ExternalLink,
   Github,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { VideoCarousel } from "@/components/VideoCarousel";
 
 export default function ProjectDemo() {
   const { id } = useParams<{ id: string }>();
@@ -35,6 +35,24 @@ export default function ProjectDemo() {
     screenshots: [],
     highlights: [],
   };
+  const mediaType =
+    demoContent.mediaType ?? (project.platform === "Mobile" ? "mobile" : "web");
+  const isMobileMedia = mediaType === "mobile";
+  const mediaFrameClass = isMobileMedia
+    ? "aspect-[9/16] max-w-sm mx-auto"
+    : "aspect-video";
+  const mediaImageClass = isMobileMedia ? "object-contain" : "object-cover";
+  const videoClips =
+    demoContent.videoClips ??
+    (demoContent.videoUrl
+      ? [
+          {
+            url: demoContent.videoUrl,
+            title: "Video Walkthrough",
+            description: demoContent.videoDescription,
+          },
+        ]
+      : []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -92,28 +110,18 @@ export default function ProjectDemo() {
         </section>
 
         {/* Video Demo Section */}
-        {demoContent.videoUrl ? (
+        {videoClips.length > 0 ? (
           <section className="section-container mb-8">
             <div className="flex items-center gap-2 mb-6">
               <Play className="h-5 w-5 text-primary" />
               <h2 className="text-2xl font-semibold">Video Walkthrough</h2>
             </div>
 
-            <div className="bg-card border border-border rounded-lg overflow-hidden mb-4">
-              <div className="aspect-video">
-                <iframe
-                  src={demoContent.videoUrl}
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title={`${project.name} Demo Video`}
-                />
-              </div>
-            </div>
-
-            <p className="text-muted-foreground">
-              {demoContent.videoDescription}
-            </p>
+            <VideoCarousel
+              items={videoClips}
+              mediaFrameClass={mediaFrameClass}
+              projectName={project.name}
+            />
           </section>
         ) : null}
 
@@ -156,12 +164,14 @@ export default function ProjectDemo() {
                   key={index}
                   className="bg-card border border-border rounded-lg overflow-hidden"
                 >
-                  <div className="aspect-video bg-secondary/50 flex items-center justify-center">
+                  <div
+                    className={`${mediaFrameClass} bg-secondary/50 flex items-center justify-center`}
+                  >
                     {screenshot.imageUrl ? (
                       <img
                         src={screenshot.imageUrl}
                         alt={screenshot.caption}
-                        className="w-full h-full object-cover"
+                        className={`w-full h-full ${mediaImageClass}`}
                       />
                     ) : (
                       <div className="text-center p-8">
@@ -235,3 +245,4 @@ export default function ProjectDemo() {
     </div>
   );
 }
+
