@@ -1,5 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-import { personalInfo } from '../data/personalInfo';
+import { Github, Linkedin, Mail } from "lucide-react";
+import { personalInfo } from "../data/personalInfo";
 
 const socialIcons = {
   github: Github,
@@ -15,20 +15,20 @@ export const Footer = () => {
       <div className="max-w-5xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground font-mono">
-            Ac {currentYear} ƒ?" Built with React
+            Ac {currentYear} | Built by {personalInfo.name.alias}
           </p>
-          
+
           <div className="flex items-center gap-4">
             {personalInfo.socialLinks.map((link) => {
               const Icon = socialIcons[link.id as keyof typeof socialIcons];
-              const isExternal = link.href.startsWith('http');
+              const isExternal = link.href.startsWith("http");
 
               return (
                 <a
                   key={link.id}
                   href={link.href}
-                  target={isExternal ? '_blank' : undefined}
-                  rel={isExternal ? 'noopener noreferrer' : undefined}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
                   className="text-muted-foreground hover:text-foreground transition-colors"
                   aria-label={link.label}
                 >
