@@ -5,7 +5,8 @@ export const personalInfo = {
     full: "Chidumebi Okeke",
     alias: "JustMebi",
   },
-  role: "Mobile & Web Application Developer",
+  profilePicUrl: "https://res.cloudinary.com/dzgtaqwwk/image/upload/v1768567425/Colored_texture_02_1_pex2di.png",
+  role: "Mobile & Web Application Developer.",
   professionalSummary: {
     lead: "Building scalable, production-grade applications with ",
     highlights: ["React", "React Native"],

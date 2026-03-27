@@ -47,16 +47,33 @@ export const mallMarkProject: Project = {
     },
   ],
   demoContent: {
-    videoUrl2:
-      "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509235/IMG_20260115_213207_213_ioy2wf.mp4",
-    videoUrl3:
-      "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509234/IMG_20260115_212731_740_li0chr.mp4",
-    videoUrl4:
-      "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509233/IMG_20260115_213049_936_uuvq78.mp4",
     videoUrl:
       "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509237/IMG_20260115_212912_783_iitmat.mp4",
     videoDescription:
       "Complete walkthrough of the customer ordering flow and vendor management dashboard.",
+    mediaType: "mobile",
+    videoClips: [
+      {
+        title: "Error Handling",
+        description: "Validation and error states during ordering.",
+        url: "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509235/IMG_20260115_213207_213_ioy2wf.mp4",
+      },
+      {
+        title: "Cart & Checkout",
+        description: "Add items, adjust quantities, and complete checkout.",
+        url: "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509234/IMG_20260115_212731_740_li0chr.mp4",
+      },
+      {
+        title: "Authentication",
+        description: "Simple login flow for returning users.",
+        url: "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509233/IMG_20260115_213049_936_uuvq78.mp4",
+      },
+      {
+        title: "Search & Filtering",
+        description: "Browse categories and refine results with filters.",
+        url: "https://res.cloudinary.com/dzgtaqwwk/video/upload/v1768509237/IMG_20260115_212912_783_iitmat.mp4",
+      },
+    ],
     screenshots: [
       {
         caption: "Product Catalog",
@@ -104,3 +121,4 @@ export const mallMarkProject: Project = {
     ],
   },
 };
+

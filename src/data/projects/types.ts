@@ -9,9 +9,17 @@ export interface DemoHighlight {
   description: string;
 }
 
+export interface DemoVideo {
+  url: string;
+  title?: string;
+  description: string;
+}
+
 export interface DemoContent {
   videoUrl?: string;
   videoDescription: string;
+  videoClips?: DemoVideo[];
+  mediaType?: 'web' | 'mobile';
   screenshots: DemoScreenshot[];
   highlights: DemoHighlight[];
 }
