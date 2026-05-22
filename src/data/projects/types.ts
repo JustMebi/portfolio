@@ -1,5 +1,5 @@
 export interface DemoScreenshot {
-  imageUrl?: string;
+  imageUrl?: string | string[];
   caption: string;
   description?: string;
 }

@@ -109,9 +109,9 @@ export const zentraProject: Project = {
           'Public waitlist deployed and collecting signups at zentragig.com ahead of full platform launch.',
       },
       {
-        title: 'Escrow Payments',
+        title: 'Seamless Payments',
         description:
-          'Milestone-based escrow via Paystack protects both clients and experts throughout the project lifecycle.',
+          'Milestone-based payment system via Paystack protects both clients and experts throughout the project lifecycle.',
       },
     ],
   },

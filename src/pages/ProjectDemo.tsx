@@ -10,6 +10,7 @@ import { projects } from "@/data/projects";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { VideoCarousel } from "@/components/VideoCarousel";
+import { ImageCarousel } from "@/components/ImageCarousel";
 
 export default function ProjectDemo() {
   const { id } = useParams<{ id: string }>();
@@ -164,26 +165,35 @@ export default function ProjectDemo() {
                   key={index}
                   className="bg-card border border-border rounded-lg overflow-hidden"
                 >
-                  <div
-                    className={`${mediaFrameClass} bg-secondary/50 flex items-center justify-center`}
-                  >
-                    {screenshot.imageUrl ? (
-                      <img
-                        src={screenshot.imageUrl}
-                        alt={screenshot.caption}
-                        className={`w-full h-full ${mediaImageClass}`}
-                      />
-                    ) : (
-                      <div className="text-center p-8">
-                        <div className="p-4 bg-muted rounded-full inline-block mb-4">
-                          <ImageIcon className="h-8 w-8 text-muted-foreground" />
+                  {Array.isArray(screenshot.imageUrl) ? (
+                    <ImageCarousel
+                      images={screenshot.imageUrl}
+                      alt={screenshot.caption}
+                      frameClass={mediaFrameClass}
+                      imageClass={mediaImageClass}
+                    />
+                  ) : (
+                    <div
+                      className={`${mediaFrameClass} bg-secondary/50 flex items-center justify-center`}
+                    >
+                      {screenshot.imageUrl ? (
+                        <img
+                          src={screenshot.imageUrl}
+                          alt={screenshot.caption}
+                          className={`w-full h-full ${mediaImageClass}`}
+                        />
+                      ) : (
+                        <div className="text-center p-8">
+                          <div className="p-4 bg-muted rounded-full inline-block mb-4">
+                            <ImageIcon className="h-8 w-8 text-muted-foreground" />
+                          </div>
+                          <p className="text-muted-foreground">
+                            Screenshot placeholder
+                          </p>
                         </div>
-                        <p className="text-muted-foreground">
-                          Screenshot placeholder
-                        </p>
-                      </div>
-                    )}
-                  </div>
+                      )}
+                    </div>
+                  )}
                   <div className="p-4 border-t border-border">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xs font-mono text-muted-foreground">

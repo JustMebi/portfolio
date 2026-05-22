@@ -13,7 +13,7 @@ export const mallMarkProject: Project = {
   techStack: ["React Native (JavaScript)", "CSS", "Render (Database)"],
   role: "Sole Frontend Developer",
   overview:
-    "Mall Mark is a production-grade grocery and items delivery platform consisting of two React Native applications: a Customer app for browsing, ordering, and tracking deliveries, and a Vendor app for inventory management, order processing, and sales analytics.",
+    "Mall Mark is a production-grade grocery and items delivery platform, live on the Apple App Store, consisting of two React Native applications: a Customer app for browsing, ordering, and tracking deliveries, and a Vendor app for inventory management, order processing, and sales analytics.",
   features: [
     "Real-time order tracking with push notifications",
     "Multi-vendor product catalog with search and filters",
@@ -117,6 +117,11 @@ export const mallMarkProject: Project = {
         title: "Offline Capable",
         description:
           "Cart and browsing work offline with sync when connection returns.",
+      },
+      {
+        title: "Live on App Store",
+        description:
+          "Available on the Apple App Store for iOS users. Android release in progress.",
       },
     ],
   },

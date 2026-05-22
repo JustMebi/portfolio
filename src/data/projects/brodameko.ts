@@ -21,7 +21,7 @@ export const brodamekoProject: Project = {
   ],
   role: 'Sole Frontend Developer',
   overview:
-    'BrodaMeko is a production-grade mobile marketplace on the Google Play Store and Apple App Store that connects car owners with qualified mechanics. The platform features role-based navigation for three user types — car owners, mechanics, and admins — with real-time chat powered by WebSocket, a job matching system, Paystack wallet integration, and a comprehensive mechanic onboarding flow including KYC document uploads and bank account verification.',
+    'BrodaMeko is a production-grade mobile marketplace that connects car owners with qualified mechanics. The platform features role-based navigation for three user types — car owners, mechanics, and admins — with real-time chat powered by WebSocket, a job matching system, Paystack wallet integration, and a comprehensive mechanic onboarding flow including KYC document uploads and bank account verification.',
   features: [
     'Role-based app experience for Car Owners, Mechanics, and Admins',
     'Job creation with issue type selection, car details, and image uploads',
@@ -70,33 +70,50 @@ export const brodamekoProject: Project = {
         caption: 'Car Owner Dashboard',
         description:
           'At-a-glance view of active jobs, quick actions, and location-based mechanic availability.',
+        imageUrl: 'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430653/Home_ebpjxk.png',
       },
       {
         caption: 'Report an Issue',
         description:
           'Car owners describe their issue, select car details, and attach photos to create a job request.',
+        imageUrl: [
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430647/Support_center_lpioog.png',
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430646/Chat_hygrv1.png',
+        ],
       },
       {
         caption: 'Find a Mechanic',
         description:
           'Browse matched mechanics, view profiles and ratings, then hire or initiate a chat.',
+        imageUrl: [
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430647/Mechanic_matching_lezcyy.png',
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430646/Waiting_screen_sdqoqp.png',
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430655/Live_tracking_rhwrn2.png',
+        ],
       },
       {
         caption: 'Mechanic Onboarding',
         description:
           'Step-by-step verification flow covering profile photo, ID, certificate, bank details, and pricing.',
+        imageUrl: [
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430652/KYC_y05krx.png',
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430651/KYC_1_pmt6d5.png',
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430650/KYC_2_hmxan6.png',
+          'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430649/KYC_3_fzu4xo.png',
+        ],
       },
       {
         caption: 'Wallet & Payments',
         description:
           'Top up wallet via Paystack, view transaction history, and manage payouts (mechanics).',
+        imageUrl: 'https://res.cloudinary.com/dzgtaqwwk/image/upload/v1779430649/Wallet_screen_qls12a.png',
       },
     ],
     highlights: [
       {
-        title: 'Live on App Stores',
+        title: 'Three-Role Platform',
         description:
-          'Shipped to production on both the Google Play Store and Apple App Store.',
+          'A single codebase serves car owners, mechanics, and admins with fully isolated navigation stacks and role-specific UX.',
       },
       {
         title: 'Real-Time Chat',
