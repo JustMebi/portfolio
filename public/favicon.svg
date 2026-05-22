@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect width="100" height="100" rx="18" fill="#0d1014"/>
+  <!-- > chevron -->
+  <polyline
+    points="14,22 44,50 14,78"
+    fill="none"
+    stroke="hsl(174, 60%, 51%)"
+    stroke-width="9"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- _ cursor -->
+  <line
+    x1="52" y1="76"
+    x2="86" y2="76"
+    stroke="hsl(174, 60%, 51%)"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+</svg>

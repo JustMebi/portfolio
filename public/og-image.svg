@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d1014"/>
+
+  <!-- Subtle dot grid -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1.2" fill="#161c26"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Large faded >_ watermark -->
+  <text
+    x="590" y="620"
+    font-family="'Courier New', Courier, monospace"
+    font-size="520"
+    font-weight="bold"
+    fill="hsl(174, 60%, 51%)"
+    opacity="0.032">
+    &gt;_
+  </text>
+
+  <!-- Left accent bar -->
+  <rect x="80" y="100" width="3" height="430" rx="1.5" fill="hsl(174, 60%, 51%)" opacity="0.6"/>
+
+  <!-- >_ prompt label -->
+  <text
+    x="104" y="152"
+    font-family="'Courier New', Courier, monospace"
+    font-size="28"
+    font-weight="bold"
+    fill="hsl(174, 60%, 51%)">
+    &gt;_
+  </text>
+
+  <!-- Name -->
+  <text
+    x="104" y="295"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="78"
+    font-weight="700"
+    fill="#edf0f5"
+    letter-spacing="-1">
+    Chidumebi Okeke
+  </text>
+
+  <!-- Role -->
+  <text
+    x="107" y="368"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="36"
+    font-weight="500"
+    fill="hsl(174, 60%, 51%)">
+    Frontend Developer
+  </text>
+
+  <!-- Platform -->
+  <text
+    x="107" y="420"
+    font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+    font-size="26"
+    fill="#4b5768">
+    Mobile &amp; Web · React Native · TypeScript
+  </text>
+
+  <!-- Divider -->
+  <line x1="80" y1="535" x2="1120" y2="535" stroke="#1a2235" stroke-width="1.5"/>
+
+  <!-- Bottom tagline -->
+  <text
+    x="107" y="575"
+    font-family="'Courier New', Courier, monospace"
+    font-size="19"
+    fill="#2d3a4e">
+    Building production-grade apps for mobile &amp; web
+  </text>
+
+</svg>
