@@ -29,6 +29,8 @@ export const personalInfo = {
       "Wordpress",
     ],
   },
+  careerStart: 2024,
+  resumeUrl: 'https://docs.google.com/document/d/1xG_9H_i1OgizltwhxuVkEaTAXyXbK9RHDX3ACqVFBwk/export?format=pdf',
   socialLinks: [
     {
       id: "github",
@@ -51,14 +53,15 @@ export const personalInfo = {
     title: "About",
     subtitle: "A brief introduction",
     paragraphs: [
-      "I'm a mobile and web application developer focused on building reliable software that solves real problems. My work spans from production React Native apps handling real users and transactions to web platforms managing complex business logic.",
-      "I enjoy the challenge of complex systems - understanding how pieces fit together, making architectural decisions that scale, and shipping features that work reliably in production.",
-      "My approach is pragmatic: choose the right tool for the problem, write code that's maintainable, and prioritize the user experience. I believe good software comes from understanding both the technical constraints and the human problems we're trying to solve.",
+      "I'm a mobile and web developer who started out doing QA, testing components, and building WordPress themes — then grew into writing features, leading teams, and shipping production apps to real clients. That progression from the ground up means I understand the full picture, not just the part I'm responsible for.",
+      "To date I've shipped software for over 5 clients, with 2 apps currently live in production. My work leans heavily toward React Native — multi-role platforms with real-time features, payment integrations, and the kind of edge cases that only show up once real users start pushing things.",
+      "I care about code that holds up: clean architecture, predictable state, and UIs that don't break when the API does. I've built in enough production environments to know that the difference between a good app and a reliable one is everything.",
     ],
     focusItems: [
-      "Scalable Architecture",
-      "Production Systems",
-      "Problem Solving",
+      "React Native",
+      "Production-Grade Apps",
+      "Multi-Role Platforms",
+      "Client Delivery",
     ],
   },
   contact: {

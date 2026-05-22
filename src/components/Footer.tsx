@@ -15,7 +15,7 @@ export const Footer = () => {
       <div className="max-w-5xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground font-mono">
-            Ac {currentYear} | Built by {personalInfo.name.alias}
+            &copy; {currentYear} | Built by {personalInfo.name.alias}
           </p>
 
           <div className="flex items-center gap-4">

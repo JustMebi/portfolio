@@ -21,7 +21,7 @@ export const brodamekoProject: Project = {
   ],
   role: 'Sole Frontend Developer',
   overview:
-    'BrodaMeko is a production-grade mobile marketplace that connects car owners with qualified mechanics. The platform features role-based navigation for three user types — car owners, mechanics, and admins — with real-time chat powered by WebSocket, a job matching system, Paystack wallet integration, and a comprehensive mechanic onboarding flow including KYC document uploads and bank account verification.',
+    'BrodaMeko is a production-grade mobile marketplace built and shipped to the client for deployment. It connects car owners with qualified mechanics through role-based navigation for three user types — car owners, mechanics, and admins — with real-time chat powered by WebSocket, a job matching system, Paystack wallet integration, and a comprehensive mechanic onboarding flow including KYC document uploads and bank account verification.',
   features: [
     'Role-based app experience for Car Owners, Mechanics, and Admins',
     'Job creation with issue type selection, car details, and image uploads',

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { Button } from './ui/button';
+import { personalInfo } from '../data/personalInfo';
 
 const navLinks = [
   { label: 'Projects', href: '/#projects' },
@@ -67,6 +68,12 @@ export const Header = () => {
               {link.label}
             </Link>
           ))}
+          <Button variant="terminal" size="sm" asChild>
+            <a href={personalInfo.resumeUrl} download="Chidumebi_Okeke_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Download className="h-3.5 w-3.5" />
+              Resume
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -94,6 +101,16 @@ export const Header = () => {
                 {link.label}
               </Link>
             ))}
+            <a
+              href={personalInfo.resumeUrl}
+              download="Chidumebi_Okeke_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+            >
+              <Download className="h-4 w-4" />
+              Download Resume
+            </a>
           </div>
         </nav>
       )}

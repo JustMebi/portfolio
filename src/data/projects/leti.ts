@@ -7,7 +7,7 @@ export const letiProject: Project = {
   shortDescription: 'Artisan & Stay Booking Platform',
   problemStatement:
     'Simplifying how Nigerians discover and book local artisans and short-stay accommodations through a single mobile platform.',
-  status: 'Active Development',
+  status: 'Production',
   hasDemo: true,
   hasGithub: false,
   techStack: [
@@ -24,7 +24,7 @@ export const letiProject: Project = {
   ],
   role: 'Mobile Developer',
   overview:
-    'Leti is a multi-role Nigerian booking app currently in active development. The platform has two core verticals: an artisan marketplace where clients discover and book local service providers (mechanics, electricians, plumbers, etc.), and a stay feature for short-term accommodation bookings. The app supports three user roles — Client, Artisan/Provider, and Owner — each with a dedicated navigation stack. The Go-powered backend handles real-time chat via WebSocket, wallet management, Cloudinary file storage, and Firebase push notifications.',
+    'Leti is a multi-role Nigerian booking app built and shipped to the client for deployment. The platform has two core verticals: an artisan marketplace where clients discover and book local service providers (mechanics, electricians, plumbers, etc.), and a stay feature for short-term accommodation bookings. The app supports three user roles — Client, Artisan/Provider, and Owner — each with a dedicated navigation stack. The Go-powered backend handles real-time chat via WebSocket, wallet management, Cloudinary file storage, and Firebase push notifications.',
   features: [
     'Dual-vertical platform — artisan service bookings and short-stay accommodation',
     'Role-based app experience for Clients, Artisans/Providers, and Owners',

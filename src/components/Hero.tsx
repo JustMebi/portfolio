@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Skeleton } from './ui/skeleton';
 import { personalInfo } from '../data/personalInfo';
@@ -11,7 +11,7 @@ const socialIcons = {
 };
 
 export const Hero = () => {
-  const { name, profilePicUrl, role, professionalSummary, hero, socialLinks } =
+  const { name, profilePicUrl, role, professionalSummary, hero, socialLinks, resumeUrl } =
     personalInfo;
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -88,6 +88,12 @@ export const Hero = () => {
         >
           <Button variant="terminal" asChild>
             <a href={hero.cta.href}>{hero.cta.label}</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href={resumeUrl} download="Chidumebi_Okeke_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <Download className="h-4 w-4" />
+              Download CV
+            </a>
           </Button>
           {socialLinks.map((link) => {
             const Icon = socialIcons[link.id as keyof typeof socialIcons];

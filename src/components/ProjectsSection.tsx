@@ -9,7 +9,7 @@ export const ProjectsSection = () => {
       </div>
       <h2 className="section-title">Projects</h2>
       <p className="section-subtitle">
-        Production applications and technical experiments
+        Production applications and client-shipped work
       </p>
       
       <div className="grid md:grid-cols-2 gap-6">
